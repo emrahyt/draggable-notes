@@ -1,0 +1,87 @@
+.lp-draggable-note,
+.lp-draggable-note * {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+.lp-draggable-note {
+  position: absolute;
+  z-index: 9;
+  background-color: #f1f1f1;
+  border: none;
+  text-align: center;
+  max-width: 100%;
+  max-height: 100%;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.12), 0 2px 4px rgba(0,0,0,0.24);
+  -webkit-box-shadow: 0 3px 5px rgba(0,0,0,0.12), 0 2px 4px rgba(0,0,0,0.24);
+  -moz-box-shadow: 0 3px 5px rgba(0,0,0,0.12), 0 2px 4px rgba(0,0,0,0.24);
+  display: 'flex';
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.item-fadeout{
+  position: absolute;
+  z-index: 9;
+  background-color: #f1f1f1;
+  border: none;
+  text-align: center;
+  max-width: 100%;
+  max-height: 100%;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.12), 0 2px 4px rgba(0,0,0,0.24);
+  -webkit-box-shadow: 0 3px 5px rgba(0,0,0,0.12), 0 2px 4px rgba(0,0,0,0.24);
+  -moz-box-shadow: 0 3px 5px rgba(0,0,0,0.12), 0 2px 4px rgba(0,0,0,0.24);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    margin: 10px;
+    -webkit-animation: fadeout 1s ease-in-out forwards;
+    animation: fadeout 1s ease-in-out forwards;
+    }
+ 
+    @-webkit-keyframes fadein {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+    }
+ 
+    @keyframes fadein {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+    }
+ 
+    @-webkit-keyframes fadeout {
+    from {background-color: white;}
+    to {background-color: black;}
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+    }
+ 
+    @keyframes fadeout {
+      from {background-color: white;}
+    to {background-color: black;}
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+    }
+
+.lp-draggable-note>.header {
+  padding: 10px;
+  cursor: move;
+  z-index: 10;
+  /* background-color: #F8F7B6; */
+  color: #222;
+}
+
+.lp-draggable-note>.content {
+  padding: 15px;
+  /* background-color: #fdfccf; */
+  border: none;
+  font: normal normal normal 0.9rem/1.6 Nunito Sans, Helvetica, Arial, sans-serif;
+  
+}
+
+.lp-draggable-note>.content:focus {
+  border: none;
+  outline: none;
+}
